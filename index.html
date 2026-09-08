@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pollos Marcos - Pollos Asados y Verduras Frescas</title>
+    <style>
+        /* Variables de Colores */
+        :root {
+            --azul-principal: #0d47a1;
+            --azul-oscuro: #0a3170;
+            --negro: #121212;
+            --blanco: #ffffff;
+            --gris-claro: #f4f6f9;
+        }
+
+        /* Estilos Generales */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--gris-claro);
+            color: var(--negro);
+            line-height: 1.6;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: var(--negro);
+            color: var(--blanco);
+            text-align: center;
+            padding: 2.5rem 1rem;
+            border-bottom: 5px solid var(--azul-principal);
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            color: var(--blanco);
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #d1d1d1;
+        }
+
+        /* Navegación */
+        nav {
+            background-color: var(--azul-principal);
+            text-align: center;
+            padding: 0.8rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: var(--blanco);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #90caf9;
+        }
+
+        /* Sección Hero */
+        .hero {
+            background: linear-gradient(rgba(10, 49, 112, 0.8), rgba(18, 18, 18, 0.8)), url('https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=1200&q=80') center/cover;
+            color: var(--blanco);
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+
+        .hero h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 1.5rem auto;
+        }
+
+        .btn-pedir {
+            display: inline-block;
+            background-color: var(--azul-principal);
+            color: var(--blanco);
+            padding: 0.8rem 1.8rem;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 25px;
+            border: 2px solid var(--blanco);
+            transition: background-color 0.3s;
+        }
+
+        .btn-pedir:hover {
+            background-color: var(--azul-oscuro);
+        }
+
+        /* Contenido Principal */
+        .contenedor {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .seccion {
+            background: var(--blanco);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-left: 6px solid var(--azul-principal);
+        }
+
+        .seccion h2 {
+            color: var(--azul-principal);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--gris-claro);
+            padding-bottom: 0.5rem;
+        }
+
+        /* Menú y Productos */
+        .productos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .producto-tarjeta {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            background-color: #fafafa;
+        }
+
+        .producto-tarjeta h3 {
+            color: var(--negro);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Contacto e Información */
+        .info-contacto p {
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .info-contacto strong {
+            color: var(--azul-principal);
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: var(--negro);
+            color: var(--blanco);
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            border-top: 4px solid var(--azul-principal);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <h1>Pollos Marcos</h1>
+        <p>¡El mejor sabor y la mejor calidad para tu mesa!</p>
+    </header>
+
+    <!-- Navegación -->
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Nuestros Productos</a>
+        <a href="#contacto">Ubicación y Contacto</a>
+    </nav>
+
+    <!-- Sección de Bienvenida -->
+    <section id="inicio" class="hero">
+        <h2>¡Bienvenidos a Pollos Marcos!</h2>
+        <p>Ofreciéndote el mejor pollo asado y las verduras más frescas de la zona.</p>
+        <a href="https://wa.me/522291764660" class="btn-pedir" target="_blank">¡Haz tu pedido por WhatsApp!</a>
+    </section>
+
+    <div class="contenedor">
+
+        <!-- Productos -->
+        <section id="productos" class="seccion">
+            <h2>Lo Que Ofrecemos</h2>
+            <div class="productos-grid">
+                <div class="producto-tarjeta">
+                    <h3>Pollos Asados</h3>
+                    <p>Jugosos, bien sazonados y recién hechos. Acompañados de sus complementos favoritos.</p>
+                </div>
+                <div class="producto-tarjeta">
+                    <h3>Verduras Frescas</h3>
+                    <p>Amplia variedad de frutas y verduras frescas del día para tus comidas.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Datos de Contacto y Ubicación -->
+        <section id="contacto" class="seccion info-contacto">
+            <h2>Ubicación y Pedidos</h2>
+            <p><strong>Teléfono / WhatsApp:</strong> <a href="tel:2291764660" style="color: var(--negro); text-decoration: none;">229 176 4660</a></p>
+            <p><strong>Dirección:</strong> Noruega Norte 525-01-3, Puente Moreno, Medellín, Veracruz.</p>
+            <p><strong>Atención:</strong> Pedidos para llevar y servicio directo en tienda.</p>
+        </section>
+
+    </div>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2026 Pollos Marcos - Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
